@@ -1,11 +1,18 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import type { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Shuhua\'s Portfolio',
-  description: 'Shuhua\'s Portfolio',
+export const metadata : Metadata = {
+  title: {
+    default: 'Shuhua Liu',
+    template: '%s | Shuhua Liu',
+  },
+  description: 'Full stack developer',
+  icons: {
+    shortcut: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
