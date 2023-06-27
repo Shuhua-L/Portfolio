@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { GithubIcon, LinkedinIcon } from "./components/icons";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <body className={inter.className}>
         <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>
+          {/* NavBar */}
           <nav>
             <Link href='/' className='mr-4'>
               Home
@@ -36,14 +38,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
           </nav>
           <nav className='flex items-center justify-center flex-wrap'>
-            <Link href='https://github.com/Shuhua-L' target={"_blank"} className='w-fit mx-3'>
-              Github
+            <Link href='https://github.com/Shuhua-L' target={"_blank"} className='w-6 mx-3'>
+              <GithubIcon />
             </Link>
             <Link
               href='https://www.linkedin.com/in/shuhua-liu/'
               target={"_blank"}
-              className='w-fit mr-3'>
-              Linkedin
+              className='w-6 mr-3'>
+              <LinkedinIcon />
             </Link>
           </nav>
         </header>
