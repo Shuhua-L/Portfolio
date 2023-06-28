@@ -2,13 +2,24 @@
 
 import Link from "next/link";
 import NavLinks from "./NavLinks";
-import { BarsIcon, CloseIcon, EmailIcon, GithubIcon, LinkedinIcon } from "../components/icons";
+import {
+  BarsIcon,
+  CloseIcon,
+  GithubIcon,
+  LinkedinIcon,
+  MoonIcon,
+  SunIcon,
+} from "../components/icons";
 import { useState } from "react";
+import useDarkMode from "./hooks/useDarkMode";
+import Image from "next/image";
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const { mode, toggleTheme } = useDarkMode();
+
+  console.log("inside header", document.documentElement.classList);
+  console.log("query", window.matchMedia("(prefers-color-scheme: dark)").matches);
 
   return (
     <header
@@ -44,9 +55,14 @@ const Header = (props: Props) => {
         <Link href='https://www.linkedin.com/in/shuhua-liu/' target={"_blank"} className='w-6 mr-3'>
           <LinkedinIcon />
         </Link>
-        <Link href='/' target={"_blank"} className='w-6 mr-3'>
-          <EmailIcon />
-        </Link>
+        <button className='w-6 mr-3' onClick={toggleTheme}>
+          {mode === "dark" ? (
+            <MoonIcon />
+          ) : (
+            // <Image src='/icons8-sun.gif' alt='sun icon' width={32} height={32}></Image>
+            <SunIcon />
+          )}
+        </button>
       </nav>
     </header>
   );
