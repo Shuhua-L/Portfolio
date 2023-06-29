@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header
       className='bg-secondary sticky top-0 p-5 py-8 font-medium flex items-start justify-between
-        max-w-7xl mx-auto xl:items-center '>
+        max-w-7xl mx-auto xl:items-center text-lg z-10'>
       <nav className='hidden w-full md:block md:w-auto space-x-4'>
         <NavLinks />
       </nav>
@@ -57,7 +57,7 @@ const Header = () => {
         </Link>
         <button className='w-6 mr-3' onClick={toggleTheme}>
           {mode === "dark" ? (
-            <MoonIcon className='text-default stroke-current' />
+            <MoonIcon />
           ) : (
             // <Image src='/icons8-sun.gif' alt='sun icon' width={32} height={32}></Image>
             <SunIcon />
