@@ -2,22 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+    --bg-primary: 247, 247, 248; /* #f7f7f8 */
+    --bg-secondary: 220, 220, 224; /* #dcdce0 */
+    --bg-tertiary: 193, 193, 200; /* #c1c1c8 */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
-    rgb(var(--background-start-rgb));
+    --text-default: 37, 25, 46; /* #25192e */
+    --text-info: 111, 111, 115; /* ##6f6f73 */
+    --text-comment: 57, 78, 86; /* #394e56 */
+
+    --hl-primary: 255, 121, 198; /* #ff79c6 */
+    --hl-secondary: 189, 147, 249; /* #bd93f9 */
+    --hl-tertiary: 255, 184, 108; /* #FFB86C */
+  }
+
+  .dark {
+    --bg-primary: 40, 42, 54; /* #282a36 */
+    --bg-secondary: 56, 58, 89; /* #383a59 */
+    --bg-tertiary: 68, 71, 90; /* #44475a */
+
+    --text-default: 248, 248, 242; /* #F8F8F2 */
+    --text-info: 139, 233, 253; /* #8be9fd */
+    --text-comment: 98, 114, 164; /* #6272A4 */
+
+    --hl-primary: 255, 121, 198; /* #ff79c6 */
+    --hl-secondary: 189, 147, 249; /* #bd93f9 */
+    --hl-tertiary: 255, 184, 108; /* #FFB86C */
+  }
 }

@@ -11,15 +11,12 @@ export const metadata: Metadata = {
     template: "%s | Shuhua Liu",
   },
   description: "Full stack developer",
-  icons: {
-    shortcut: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} bg-white dark:bg-black`}>
+      <body className={`${inter.className} bg-primary text-default`}>
         <Header />
         <main>{children}</main>
       </body>

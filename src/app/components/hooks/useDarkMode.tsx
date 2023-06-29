@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 const COLOR_SCHEME_QUERY = "(prefers-color-scheme: dark)";
 
@@ -13,7 +11,7 @@ const useDarkMode = (): useDarkModeOutput => {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(COLOR_SCHEME_QUERY);
-    const userPref = window.localStorage.getItem("theme");
+    const userPref = localStorage.getItem("theme");
 
     const handleChangeTheme = () => {
       let check = (userPref && userPref === "dark") || mediaQuery.matches ? "dark" : "light";
@@ -32,10 +30,10 @@ const useDarkMode = (): useDarkModeOutput => {
 
   useEffect(() => {
     if (mode === "dark") {
-      window.localStorage.setItem("theme", "dark");
+      localStorage.setItem("theme", "dark");
       document.documentElement.classList.add("dark");
     } else {
-      window.localStorage.setItem("theme", "light");
+      localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
     }
   }, [mode]);
