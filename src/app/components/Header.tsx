@@ -18,13 +18,13 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const { mode, toggleTheme } = useDarkMode();
 
-  console.log("inside header", document.documentElement.classList);
-  console.log("query", window.matchMedia("(prefers-color-scheme: dark)").matches);
+  // console.log("inside header", document.documentElement.classList);
+  // console.log("query", window.matchMedia("(prefers-color-scheme: dark)").matches);
 
   return (
     <header
-      className='sticky top-0 p-5 py-8 font-medium flex items-start justify-between
-        max-w-7xl mx-auto xl:items-center bg-slate-50 border-gray-300'>
+      className='bg-secondary sticky top-0 p-5 py-8 font-medium flex items-start justify-between
+        max-w-7xl mx-auto xl:items-center '>
       <nav className='hidden w-full md:block md:w-auto space-x-4'>
         <NavLinks />
       </nav>
@@ -35,7 +35,7 @@ const Header = () => {
       </button>
       {openMenu && (
         <div
-          className='z-10 h-screen w-full top-0 left-0 fixed bg-slate-100
+          className='z-10 h-screen w-full top-0 left-0 fixed bg-secondary
         flex items-center justify-center text-center'>
           <span className='absolute top-8 right-8' onClick={() => setOpenMenu(!openMenu)}>
             <CloseIcon className='w-8 h-8 cursor-pointer' />
@@ -57,7 +57,7 @@ const Header = () => {
         </Link>
         <button className='w-6 mr-3' onClick={toggleTheme}>
           {mode === "dark" ? (
-            <MoonIcon />
+            <MoonIcon className='text-default stroke-current' />
           ) : (
             // <Image src='/icons8-sun.gif' alt='sun icon' width={32} height={32}></Image>
             <SunIcon />
