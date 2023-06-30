@@ -2,16 +2,9 @@
 
 import Link from "next/link";
 import NavLinks from "./NavLinks";
-import {
-  BarsIcon,
-  CloseIcon,
-  GithubIcon,
-  LinkedinIcon,
-  MoonIcon,
-  SunIcon,
-} from "../components/icons";
+import { BarsIcon, CloseIcon, GithubIcon, LinkedinIcon, MoonIcon, SunIcon } from "../assets/icons";
 import { useState } from "react";
-import useDarkMode from "./hooks/useDarkMode";
+import useDarkMode from "../hooks/useDarkMode";
 import Image from "next/image";
 
 const Header = () => {
@@ -23,9 +16,9 @@ const Header = () => {
 
   return (
     <header
-      className='bg-secondary sticky top-0 p-5 py-8 font-medium flex items-start justify-between
+      className='bg-primary sticky top-0 p-5 py-8 font-medium flex items-start justify-between
         max-w-7xl mx-auto xl:items-center text-lg z-10
-        shadow-md'>
+        border-b-2 border-inherit'>
       <nav className='hidden w-full md:block md:w-auto space-x-4'>
         <NavLinks />
       </nav>

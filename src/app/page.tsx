@@ -5,7 +5,7 @@ import Projects from "./components/Projects";
 
 export default function Home() {
   return (
-    <>
+    <main className='max-w-7xl mx-auto'>
       <section id='home' className='flex flex-col h-screen relative w-full'>
         <Hero />
       </section>
@@ -19,6 +19,6 @@ export default function Home() {
       <section id='contact' className='flex flex-col h-screen relative w-full bg-secondary'>
         <Contact />
       </section>
-    </>
+    </main>
   );
 }
