@@ -16,9 +16,9 @@ const Header = () => {
 
   return (
     <header
-      className='bg-primary sticky top-0 p-5 py-8 font-medium flex items-start justify-between
+      className='bg-primary fixed w-full top-0 p-5 py-8 font-medium flex items-start justify-between
         max-w-7xl mx-auto xl:items-center text-lg z-10
-        border-b-2 border-inherit'>
+        border-b-2 border-inherit dark:border-neutral-400'>
       <nav className='hidden w-full md:block md:w-auto space-x-4'>
         <NavLinks />
       </nav>

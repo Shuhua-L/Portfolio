@@ -12,7 +12,7 @@ const Hero = () => {
     delaySpeed: 3000,
   });
 
-  const techStack = ["javascript", "typescript", "react", "tailwind", "express", "nodejs"];
+  const techStack = ["javascript", "typescript", "react", "tailwindcss", "express", "nodejs"];
 
   return (
     // container
@@ -55,7 +55,7 @@ const Hero = () => {
                   <Image
                     src={`./images/${tool}.svg`}
                     title={tool}
-                    height={38}
+                    height={40}
                     width={40}
                     alt={`skill-icon-${tool}`}
                   />
