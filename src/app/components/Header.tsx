@@ -24,7 +24,8 @@ const Header = () => {
   return (
     <header
       className='bg-secondary sticky top-0 p-5 py-8 font-medium flex items-start justify-between
-        max-w-7xl mx-auto xl:items-center text-lg z-10'>
+        max-w-7xl mx-auto xl:items-center text-lg z-10
+        shadow-md'>
       <nav className='hidden w-full md:block md:w-auto space-x-4'>
         <NavLinks />
       </nav>
@@ -35,7 +36,7 @@ const Header = () => {
       </button>
       {openMenu && (
         <div
-          className='z-10 h-screen w-full top-0 left-0 fixed bg-secondary
+          className='z-10 h-screen w-full top-0 left-0 fixed bg-primary
         flex items-center justify-center text-center'>
           <span className='absolute top-8 right-8' onClick={() => setOpenMenu(!openMenu)}>
             <CloseIcon className='w-8 h-8 cursor-pointer' />

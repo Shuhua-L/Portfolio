@@ -6,7 +6,6 @@ import Projects from "./components/Projects";
 export default function Home() {
   return (
     <>
-      <h1 className='text-secondary'>Hello, portfolio!</h1>
       <section id='home' className='flex flex-col h-screen relative w-full'>
         <Hero />
       </section>
