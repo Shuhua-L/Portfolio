@@ -16,7 +16,7 @@ export const GithubIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => 
 export const LinkedinIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
-    height='1em'
+    height='1rem'
     viewBox='0 0 448 512'
     width='1em'
     fill='currentColor'

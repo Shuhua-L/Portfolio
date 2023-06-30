@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --bg-primary: 247, 247, 248; /* #f7f7f8 */
-    --bg-secondary: 220, 220, 224; /* #dcdce0 */
+    --bg-primary: 249, 249, 249; /* #f9f9f9 */
+    --bg-secondary: 255, 255, 255; /* #ffffff */
     --bg-tertiary: 193, 193, 200; /* #c1c1c8 */
 
     --text-default: 37, 25, 46; /* #25192e */
@@ -18,8 +18,8 @@
   }
 
   .dark {
-    --bg-primary: 40, 42, 54; /* #282a36 */
-    --bg-secondary: 56, 58, 89; /* #383a59 */
+    --bg-secondary: 40, 42, 54; /* #282a36 */
+    --bg-primary: 56, 58, 89; /* #383a59 */
     --bg-tertiary: 68, 71, 90; /* #44475a */
 
     --text-default: 248, 248, 242; /* #F8F8F2 */
