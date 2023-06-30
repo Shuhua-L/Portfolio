@@ -3,6 +3,7 @@
 import Lottie from "lottie-react";
 import spaceBoy from "@/app/assets/space-boy-animation.json";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import Image from "next/image";
 
 const Hero = () => {
   const [text] = useTypewriter({
@@ -10,6 +11,8 @@ const Hero = () => {
     loop: true,
     delaySpeed: 3000,
   });
+
+  const techStack = ["javascript", "typescript", "react", "tailwind", "express", "nodejs"];
 
   return (
     // container
@@ -36,6 +39,30 @@ const Hero = () => {
 
           {/* Animation */}
           <Lottie animationData={spaceBoy} />
+        </div>
+
+        {/* skills */}
+        <div className='hidden md:flex items-center mb-2'>
+          <p className='border-r-2 pr-2 border-current font-mono font-semi font-medium'>
+            Tech Stack
+          </p>
+          <div className='logos'>
+            <ul className='flex flex-wrap gap-8'>
+              {techStack.map((tool, idx) => (
+                <li
+                  key={idx}
+                  className='items-center bg-primary dark:bg-[#F8F8F2] shadow-md cursor-pointer relative flex h-14 w-14 rounded-full'>
+                  <Image
+                    src={`./images/${tool}.svg`}
+                    title={tool}
+                    height={38}
+                    width={40}
+                    alt={`skill-icon-${tool}`}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
