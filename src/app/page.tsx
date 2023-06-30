@@ -5,18 +5,22 @@ import Projects from "./sections/Projects";
 
 export default function Home() {
   return (
-    <main className='max-w-7xl mx-auto'>
-      <section id='home' className='flex flex-col h-screen relative w-full'>
+    <main className='max-w-7xl mx-auto overflow-y-scroll snap-mandatory snap-y h-screen #no-scrollbar'>
+      <section id='home' className='snap-center flex flex-col h-screen relative w-full'>
         <Hero />
       </section>
 
-      <section id='about' className='flex flex-col h-screen relative w-full bg-secondary '>
+      <section
+        id='about'
+        className='snap-center flex flex-col h-screen relative w-full bg-secondary '>
         <About />
       </section>
-      <section id='projects' className='flex flex-col h-screen relative w-full'>
+      <section id='projects' className='snap-center flex flex-col h-screen relative w-full'>
         <Projects />
       </section>
-      <section id='contact' className='flex flex-col h-screen relative w-full bg-secondary'>
+      <section
+        id='contact'
+        className='snap-center flex flex-col h-screen relative w-full bg-secondary'>
         <Contact />
       </section>
     </main>
