@@ -6,19 +6,21 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Technologies Used
 
-🚀 Next.js (built with `create-next-app`)
-🔗 TypeScript
-💅 Tailwind CSS
-☁️ Vercel (for deployment)
+- 🚀 Next.js (built with `create-next-app`)
+- 🔗 TypeScript
+- 💅 Tailwind CSS
+- ☁️ Vercel (for deployment)
 
 ## Roadmap
 
-- ✅ Create a header/navbar.
-- ⏳ Complete the home page section.
-- ⏳ Design and implement the about section.
-- ⏳ Create the projects showcase section.
-- ⏳ Develop the contact section.
-- ⏳ Integrate animations using Framer Motion.
-- ⏳ Make the entire portfolio site fully responsive.
+- ✅ Navigation Bar
+- ✅ Light/Dark Mode + Mode Switcher
+- ✅ Hero Section
+- ⏳ About section
+- ⏳ The projects showcase section
+- ⏳ The contact section
+- ⏳ Animations vis Framer Motion
+- ⏳ Fully responsive
+- ⏳ Deploying to Vercel
 
 Feel free to explore my portfolio site and check back for updates as I work on these features. 😊
