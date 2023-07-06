@@ -12,15 +12,16 @@ export default function Home() {
 
       <section
         id='about'
-        className='snap-center flex flex-col h-screen relative w-full bg-secondary '>
+        className='snap-start flex flex-col min-h-screen relative w-full bg-secondary '>
+        <About />
         <About />
       </section>
-      <section id='projects' className='snap-center flex flex-col h-screen relative w-full'>
+      <section id='projects' className='snap-start flex flex-col min-h-screen relative w-full'>
         <Projects />
       </section>
       <section
         id='contact'
-        className='snap-center flex flex-col h-screen relative w-full bg-secondary'>
+        className='snap-start flex flex-col min-h-screen relative w-full bg-secondary'>
         <Contact />
       </section>
     </main>
