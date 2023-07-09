@@ -6,13 +6,14 @@ import Projects from "./sections/Projects";
 
 export default function Home() {
   return (
-    <main className='overflow-y-scroll snap-mandatory snap-y h-screen scroll-smooth #no-scrollbar'>
+    <main
+      className='overflow-y-scroll snap-proximity snap-y h-screen scroll-smooth #no-scrollbar
+    prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none prose-a:no-underline'>
       <Header />
       <section id='home' className='snap-center flex flex-col relative w-full'>
         <Hero />
       </section>
-      <section id='about' className='snap-start flex flex-col relative w-full bg-secondary '>
-        <About />
+      <section id='about' className='snap-start flex flex-col relative w-full'>
         <About />
       </section>
       <section id='projects' className='snap-start flex flex-col relative w-full'>
