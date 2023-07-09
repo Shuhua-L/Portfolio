@@ -17,10 +17,10 @@ const Hero = () => {
   return (
     // container
     <div
-      className='container mx-auto my-0 px-16 py-0 md:py-40 h-full
-    prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none'>
+      className='container max-w-7xl mx-auto my-0 px-16 pb-20 md:py-20
+    prose md:prose-lg lg:prose-xl dark:prose-invert'>
       {/* content */}
-      <div className='items-start flex flex-col justify-start relative gap-20'>
+      <div className='items-start flex flex-col justify-start relative gap-10'>
         {/* main section */}
         <div className='flex flex-col-reverse md:flex-row gap-12 text-center md:text-start h-auto items-center justify-center relative '>
           {/* text */}
