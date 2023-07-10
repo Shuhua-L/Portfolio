@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header
       className='bg-primary sticky w-full top-0 p-5 py-8 font-medium text-lg z-10
-        border-b-2 border-inherit dark:border-neutral-400'>
+        border-b-2 border-inherit dark:border-neutral-400 md:prose-lg lg:prose-xl'>
       <div
         className='flex items-start justify-between
         max-w-7xl mx-auto xl:items-center '>
