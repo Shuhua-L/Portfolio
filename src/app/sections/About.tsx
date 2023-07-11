@@ -5,29 +5,49 @@ type Props = {};
 
 const hackReactor = {
   title: "Hack Reactor",
-  time: "March 2023 - June 2023",
-  description: [
-    "12-week software engineering immersive program with 800+ hours of coding",
-    "Full-Stack development with JavaScript, React, Express, PostgreSQL, MongoDB, and PostgreSQL in an AGILE environment",
-    "Relevant Coursework: JavaScript, React, Node, Express, HTML, CSS, PostgreSQL, MongoDB, Jest, AWS",
-  ],
+  subtitle: "",
+  time: "2023",
+  description: `
+  The intense 12-week program provided a comprehensive curriculum, offering hands-on
+  experience working solo, in pairs, and as part of a team. The 11-hour daily
+  schedule and 8-hour Saturday classes were challenging but well worth it.
+  I gained invaluable expertise in various technologies such as TypeScript,
+  React, TailwindCSS, Express, PostgreSQL, MongoDB, Jest, and AWS.`,
 };
 
-const aboutMe = `As a junior full-stack developer, I bring a diverse skill set to the table, including
-proficiency in React, TypeScript, Tailwind, Node.js, and Next.js. With a keen eye for
-detail, I excel in creating responsive websites that offer a smooth user experience. My
-passion lies in crafting dynamic and attractive interfaces through writing clean and
-optimized code, along with the latest development tools and techniques. Continual growth
-and learning are important to me, as I always aim to stay updated with the latest
-advancements in the field. By embracing new technologies and methodologies, my goal is
-to provide innovative solutions that go beyond expectations.`;
+const CS50Web = {
+  title: "CS50's Web Programming with Python and JavaScript",
+  subtitle: "",
+  time: "2022 - 2023",
+  description: `
+    This online course is an empowering journey
+    into the world of web app development. Dive deep into Python, JavaScript, and SQL,
+    and explore frameworks like Django, React, and Bootstrap. With hands-on projects,
+    I learned about database design, scalability, security, and user experience. `,
+};
+
+const BachelorDegree = {
+  title: "University of Massachusetts, Boston",
+  subtitle: "B.S. in Mathematics",
+  time: "2016 - 2020",
+  description: `Relevant courses: Calculus I-III,
+    Linear Algebra,
+    Logic,
+    Probability and Statistics,
+    Discrete Mathematics,
+    Algorithms.`,
+};
+
+const aboutMe = `I am a skilled and motivated full-stack software engineer with
+a background in Mathematics. I am looking to fuel my passion for the tech industry
+by developing applications that simplify the lives of others.`;
 
 const About = (props: Props) => {
   return (
     // container
     <div className='container max-w-7xl mx-auto my-0 px-6 lg:px-16 py-28 md:py-40'>
       {/* content */}
-      <div className='items-center flex flex-col justify-center relative'>
+      <div className='flex flex-col justify-center relative'>
         <div>
           <h1>About Me</h1>
           <p className='max-w-prose'>{aboutMe}</p>
@@ -35,25 +55,9 @@ const About = (props: Props) => {
         <h2>Experience</h2>
         <div id='timeline'>
           <div className='flex flex-col md:grid grid-cols-9 mx-auto p-2'>
-            <TimelineSection
-              direction='left'
-              title={hackReactor.title}
-              time={hackReactor.time}
-              description={hackReactor.description}
-            />
-            <TimelineSection
-              direction='right'
-              title={hackReactor.title}
-              time={hackReactor.time}
-              description={hackReactor.description}
-            />
-
-            <TimelineSection
-              direction='left'
-              title={hackReactor.title}
-              time={hackReactor.time}
-              description={hackReactor.description}
-            />
+            <TimelineSection direction='left' position='latest' experience={hackReactor} />
+            <TimelineSection direction='right' position='' experience={CS50Web} />
+            <TimelineSection direction='left' position='start' experience={BachelorDegree} />
           </div>
         </div>
       </div>
