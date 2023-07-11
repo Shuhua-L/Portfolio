@@ -20,7 +20,7 @@ const Header = () => {
         border-b-2 border-inherit dark:border-neutral-400 md:prose-lg lg:prose-xl'>
       <div
         className='flex items-start justify-between
-        max-w-7xl mx-auto xl:items-center '>
+        max-w-6xl mx-auto xl:items-center '>
         <nav className='hidden w-full md:block md:w-auto space-x-4'>
           <NavLinks />
         </nav>

@@ -45,16 +45,16 @@ by developing applications that simplify the lives of others.`;
 const About = (props: Props) => {
   return (
     // container
-    <div className='container max-w-7xl mx-auto my-0 px-6 lg:px-16 py-28 md:py-40'>
+    <div className='container max-w-7xl mx-auto my-0 px-6 lg:px-16 py-28 md:py-40 min-h-screen'>
       {/* content */}
       <div className='flex flex-col justify-center relative'>
-        <div>
+        <div className=''>
           <h1>About Me</h1>
           <p className='max-w-prose'>{aboutMe}</p>
         </div>
         <h2>Experience</h2>
         <div id='timeline'>
-          <div className='flex flex-col md:grid grid-cols-9 mx-auto p-2'>
+          <div className='flex flex-col md:grid grid-cols-9 mx-auto'>
             <TimelineSection direction='left' position='latest' experience={hackReactor} />
             <TimelineSection direction='right' position='' experience={CS50Web} />
             <TimelineSection direction='left' position='start' experience={BachelorDegree} />
