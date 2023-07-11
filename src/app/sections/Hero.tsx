@@ -16,11 +16,11 @@ const Hero = () => {
 
   return (
     // container
-    <div className='container max-w-7xl mx-auto my-0 px-16 pb-20 md:py-20 md:prose-lg lg:prose-xl'>
+    <div className='container max-w-7xl mx-auto my-0 px-16 py-10 md:py-20 md:prose-lg lg:prose-xl min-h-screen'>
       {/* content */}
       <div className='items-start flex flex-col justify-start relative gap-10'>
         {/* main section */}
-        <div className='flex flex-col-reverse md:flex-row gap-12 text-center md:text-start h-auto items-center justify-center relative '>
+        <div className='flex flex-col-reverse lg:flex-row gap-12 text-center md:text-start h-auto items-center justify-center relative '>
           {/* text */}
           <div className='flex flex-col max-w-3xl relative'>
             <h1>
