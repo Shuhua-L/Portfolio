@@ -16,11 +16,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - ✅ Navigation Bar
 - ✅ Light/Dark Mode + Mode Switcher
 - ✅ Hero Section
-- ⏳ About section
+- ✅ About section
+- ✅ Deployed to Vercel
 - ⏳ The projects showcase section
 - ⏳ The contact section
 - ⏳ Animations vis Framer Motion
 - ⏳ Fully responsive
-- ⏳ Deploying to Vercel
 
 Feel free to explore my portfolio site and check back for updates as I work on these features. 😊

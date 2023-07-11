@@ -20,7 +20,7 @@ const Hero = () => {
       {/* content */}
       <div className='items-start flex flex-col justify-start relative gap-10'>
         {/* main section */}
-        <div className='flex flex-col-reverse lg:flex-row gap-12 text-center md:text-start h-auto items-center justify-center relative '>
+        <div className='flex flex-col-reverse lg:flex-row gap-12 text-center lg:text-start h-auto m-auto items-center justify-center relative '>
           {/* text */}
           <div className='flex flex-col max-w-3xl relative'>
             <h1>

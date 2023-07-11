@@ -5,7 +5,7 @@ type Props = {};
 const Projects = (props: Props) => {
   return (
     // container
-    <div className='container mx-auto my-0 px-16 pt-24 md:py-40'>
+    <div className='container mx-auto my-0 px-16 pt-24 md:py-40 min-h-screen'>
       {/* content */}
       <div className='items-center flex gap-40 justify-center relative'>Projects</div>
     </div>
