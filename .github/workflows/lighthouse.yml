@@ -1,4 +1,4 @@
-name: Lighthouse Audit
+name: Preview URL Lighthouse Audit 
 
 on: [pull_request]
 
