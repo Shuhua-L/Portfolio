@@ -87,3 +87,15 @@ export const MoonIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => (
     <path d='M223.5 32C100 32 0 132.3 0 256s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z' />
   </svg>
 );
+
+export const CalenderIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => (
+  <svg
+    aria-hidden='true'
+    xmlns='http://www.w3.org/2000/svg'
+    fill='currentColor'
+    viewBox='0 0 20 20'
+    className={`w-2.5 h-2.5 ${className}`}
+    {...props}>
+    <path d='M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z' />
+  </svg>
+);
