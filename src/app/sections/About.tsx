@@ -8,7 +8,7 @@ by developing applications that simplify the lives of others.`;
 const About = () => {
   return (
     // container
-    <div className='container max-w-7xl mx-auto my-0 px-6 lg:px-16 py-28 md:py-40 min-h-screen'>
+    <div className='container max-w-7xl mx-auto my-0 px-6 lg:px-16 py-28 md:py-40'>
       {/* content */}
       <div className='flex flex-col justify-center relative'>
         <div className=''>
