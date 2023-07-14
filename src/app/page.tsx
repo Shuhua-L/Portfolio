@@ -19,7 +19,7 @@ export default function Home() {
       <section id='projects' className='snap-start flex flex-col relative w-full'>
         <Projects />
       </section>
-      <section id='contact' className='snap-start flex flex-col relative w-full bg-secondary'>
+      <section id='contact' className='snap-start flex flex-col relative w-full'>
         <Contact />
       </section>
     </main>

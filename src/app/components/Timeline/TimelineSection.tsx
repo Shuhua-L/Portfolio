@@ -1,15 +1,10 @@
-import React from "react";
 import TimelineBar from "./TimelineBar";
+import { TExperience } from "@/app/data/experience";
 
 type Props = {
-  direction: string;
-  position: string;
-  experience: {
-    title: string;
-    subtitle: string;
-    time: string;
-    description: string;
-  };
+  direction: "left" | "right";
+  position: "start" | "" | "latest";
+  experience: TExperience;
 };
 
 const TimelineSection = ({
