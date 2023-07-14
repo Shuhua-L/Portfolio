@@ -21,6 +21,8 @@ const colors = {
   pink: generateColorClass("color-pink"),
   purple: generateColorClass("color-purple"),
   orange: generateColorClass("color-orange"),
+  error: generateColorClass("color-error"),
+  success: generateColorClass("color-success"),
 };
 
 module.exports = {
