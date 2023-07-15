@@ -18,8 +18,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - ✅ Hero Section
 - ✅ About section
 - ✅ Deployed to Vercel
+- ✅ The contact section
 - ⏳ The projects showcase section
-- ⏳ The contact section
 - ⏳ Animations vis Framer Motion
 - ⏳ Fully responsive
 
