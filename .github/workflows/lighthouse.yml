@@ -1,6 +1,9 @@
 name: Preview URL Lighthouse Audit
 
-on: [pull_request]
+# on: [pull_request]
+on:
+  issue_comment:
+    types: [created, edited]
 
 jobs:
   generate_lighthouse_audit:
@@ -16,8 +19,6 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const comment = context.payload.comment;
-            let previewUrl;
-            if(comment) {
             const regex = /https:\/\/vercel\.live\/open-feedback\/[a-z0-9-]+\.vercel\.app\?via=pr-comment-visit-preview-link&passThrough=1/g;
             const matches = comment.body.match(regex);
             let previewUrl = "";
@@ -26,7 +27,6 @@ jobs:
               console.log('Preview url found:', previewUrl);
             }
             console.log("No preview url found.");
-            } else { previewUrl = 'https://portfolio-shuhua-l.vercel.app';}
             core.setOutput('vercel_preview_url', previewUrl);
 
       - name: Add comment to PR
