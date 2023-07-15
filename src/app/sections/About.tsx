@@ -13,7 +13,7 @@ const About = () => {
       <div className='flex flex-col justify-center relative'>
         <div className=''>
           <h1>About Me</h1>
-          <p className='max-w-prose'>{aboutMe}</p>
+          <p className=' max-w-prose'>{aboutMe}</p>
         </div>
         <h2>Experience</h2>
         <div id='timeline'>
