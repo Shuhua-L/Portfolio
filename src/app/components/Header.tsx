@@ -23,7 +23,7 @@ const Header = () => {
 
         {/* Mobile Navbar */}
         <button className='md:hidden' onClick={() => setOpenMenu(!openMenu)}>
-          <BarsIcon className='h-5 w-5 md:h-6 md:w-6' />
+          <BarsIcon className='h-5 w-5 md:h-6 md:w-6' aria-label='Menu' />
         </button>
         {openMenu && (
           <div
@@ -41,13 +41,19 @@ const Header = () => {
         )}
 
         <nav className='flex items-center justify-center flex-wrap space-x-3 ld:space-x-5 not-prose'>
-          <Link href='https://github.com/Shuhua-L' target={"_blank"}>
+          <Link
+            href='https://github.com/Shuhua-L'
+            target={"_blank"}
+            aria-label='Check out my Github profile'>
             <GithubIcon className='h-5 w-5 md:h-6 md:w-6' />
           </Link>
-          <Link href='https://www.linkedin.com/in/shuhua-liu/' target={"_blank"}>
+          <Link
+            href='https://www.linkedin.com/in/shuhua-liu/'
+            target={"_blank"}
+            aria-label='Check out my Linkedin profile'>
             <LinkedinIcon className='h-5 w-5 md:h-6 md:w-6' />
           </Link>
-          <button className='w-6' onClick={toggleTheme}>
+          <button className='w-6' onClick={toggleTheme} aria-label='Light/Dark mode switcher'>
             {mode === "dark" ? (
               <MoonIcon className='h-5 w-5 md:h-6 md:w-6' />
             ) : (
