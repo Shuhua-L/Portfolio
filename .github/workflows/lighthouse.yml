@@ -1,4 +1,4 @@
-name: Preview URL Lighthouse Audit 
+name: Preview URL Lighthouse Audit
 
 on: [pull_request]
 
@@ -18,7 +18,7 @@ jobs:
             const comment = context.payload.comment;
             let previewUrl;
             if(comment) {
-            const regex = /https:\/\/[a-z0-9-]+\.vercel\.app/g;
+            const regex = /https:\/\/vercel\.live\/open-feedback\/[a-z0-9-]+\.vercel\.app\?via=pr-comment-visit-preview-link&passThrough=1/g;
             const matches = comment.body.match(regex);
             let previewUrl = "";
             if (matches && matches.length) {
