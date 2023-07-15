@@ -1,18 +1,20 @@
 "use client";
-import { FormEvent, useEffect, useState, ChangeEvent } from "react";
+import { FormEvent, useState, ChangeEvent } from "react";
 import { CheckIcon, CloseIcon, LoadIcon, WarningIcon } from "../assets/icons";
 
 const validation = {
   errorMessageEmail: "A valid e-mail address is required. Example: yourname@gmail.com",
   errorMessageMessage: "Messages must be at least 15 characters long",
   errorMessageName: "Names must be at least 2 characters long",
+  emailRegex: ".+@[^.].*.[a-z]{2,}",
+  nameRegex: ".{2,}",
+  messageRegex: ".{15,1000}",
+};
 
-  isValidEmail: (email: string) => {
-    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    return emailRegex.test(email) ? true : false;
-  },
-  isValidMessage: (message: string) => (message.trim().length >= 15 ? true : false),
-  isValidName: (name: string) => (name.trim().length >= 2 ? true : false),
+type ContactForm = {
+  email: string;
+  name: string;
+  message: string;
 };
 
 const ContactForm = () => {
@@ -24,34 +26,17 @@ const ContactForm = () => {
 
   const [formData, setFormData] = useState(formInit);
 
-  const [formValidation, setFormValidation] = useState({
-    email: true,
-    name: true,
-    message: true,
-    form: false,
-  });
-
   // "initial" | "sending" | "sent" | "error";
-  const [formStatus, setFormStatus] = useState("error");
+  const [formStatus, setFormStatus] = useState("initial");
 
-  useEffect(() => {
-    // validate fields when a value changes
-    const { isValidEmail, isValidName, isValidMessage } = validation;
-
-    const validator = (input: string, isValidInput: (input: string) => boolean) =>
-      input.length === 0 || isValidInput(input);
-
-    const validate = {
-      email: validator(formData.email, isValidEmail),
-      name: validator(formData.name, isValidName),
-      message: validator(formData.message, isValidMessage),
-      form:
-        isValidEmail(formData.email) &&
-        isValidName(formData.name) &&
-        isValidMessage(formData.message),
-    };
-    setFormValidation(validate);
-  }, [formData]);
+  const isValidForm = (form: ContactForm) => {
+    const { email, name, message } = form;
+    return (
+      new RegExp(validation.emailRegex).test(email) &&
+      new RegExp(validation.nameRegex).test(name) &&
+      new RegExp(validation.messageRegex).test(message)
+    );
+  };
 
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
@@ -62,7 +47,9 @@ const ContactForm = () => {
 
   const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!formValidation.form) return;
+    // if (!isValidForm(formData)) {
+    //   return;
+    // }
     setFormStatus("sending");
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -98,10 +85,13 @@ const ContactForm = () => {
 
       {formStatus !== "error" && (
         <form
+          noValidate
           onSubmit={(e) => void handleFormSubmit(e)}
-          className={`${formStatus === "sending" ? "#blur-sm #cursor-wait" : ""}`}>
-          <div className={`${formValidation.email ? "mb-6" : ""}`}>
-            <label htmlFor='email' className='block mb-1 text-sm font-medium '>
+          className={`${formStatus === "sending" ? "#blur-sm #cursor-wait" : ""} group`}>
+          <div className=''>
+            <label
+              htmlFor='email'
+              className='block mb-1 text-sm font-medium after:content-["*"] after:ml-0.5 after:text-pink'>
               EMAIL
             </label>
             <input
@@ -112,19 +102,24 @@ const ContactForm = () => {
               placeholder='example@gmail.com'
               value={formData.email}
               onChange={handleInputChange}
+              pattern={validation.emailRegex}
               className='
               shadow-sm border bg-secondary border-gray-300 text-sm rounded-lg
-              block w-full p-2.5'
+              block w-full p-2.5 peer/email
+              invalid:[&:not(:placeholder-shown):not(:focus)]:border-error'
             />
             <span
-              className={`${formValidation.email ? "hidden" : ""} block mb-1 text-sm text-error`}>
+              className={`mb-1 text-sm text-error invisible
+               peer-[&:not(:placeholder-shown):not(:focus):invalid]/email:visible`}>
               <strong className='text-error'>Oops! </strong>
               {validation.errorMessageEmail}
             </span>
           </div>
 
-          <div className={`${formValidation.name ? "mb-6" : ""}`}>
-            <label htmlFor='name' className='block mb-1 text-sm font-medium '>
+          <div className=''>
+            <label
+              htmlFor='name'
+              className='block mb-1 text-sm font-medium after:content-["*"] after:ml-0.5 after:text-pink'>
               NAME
             </label>
             <input
@@ -135,30 +130,39 @@ const ContactForm = () => {
               placeholder='What is your name?'
               value={formData.name}
               onChange={handleInputChange}
-              className='block bg-secondary p-3 w-full text-sm rounded-lg border border-gray-300 shadow-sm'
+              pattern={validation.nameRegex}
+              className='block bg-secondary p-3 w-full text-sm rounded-lg border border-gray-300 shadow-sm
+              peer/name invalid:[&:not(:placeholder-shown)]:border-error'
             />
             <span
-              className={`${formValidation.name ? "hidden" : ""} block mb-1 text-sm text-error`}>
+              className={`block mb-1 text-sm text-error
+              invisible peer-[&:not(:placeholder-shown):not(:focus):invalid]/name:visible`}>
               <strong className='text-error'>Oops! </strong>
               {validation.errorMessageName}
             </span>
           </div>
 
-          <div className={`${formValidation.message ? "mb-6" : ""}`}>
-            <label htmlFor='message' className='block mb-1 text-sm font-medium'>
+          <div className=''>
+            <label
+              htmlFor='message'
+              className='block mb-1 text-sm font-medium after:content-["*"] after:ml-0.5 after:text-pink'>
               MESSAGE
             </label>
             <textarea
               name='message'
               id='message'
-              required
               placeholder='Hi Shuhua!'
               value={formData.message}
               rows={5}
               onChange={handleInputChange}
-              className='block bg-secondary p-2.5 w-full text-sm rounded-lg shadow-sm border border-gray-300'></textarea>
+              required
+              minLength={15}
+              maxLength={1000}
+              className='block bg-secondary p-2.5 w-full text-sm rounded-lg shadow-sm border border-gray-300
+              peer invalid:[&:not(:placeholder-shown)]:border-error'></textarea>
             <span
-              className={`${formValidation.message ? "hidden" : ""} block mb-1 text-sm text-error`}>
+              className={`block mb-1 text-sm text-error
+              invisible peer-[&:not(:placeholder-shown):not(:focus):invalid]:visible`}>
               <strong className='text-error'>Oops! </strong>
               {validation.errorMessageMessage}
             </span>
@@ -167,12 +171,12 @@ const ContactForm = () => {
             {formStatus === "sending" || (
               <button
                 type='submit'
-                className='mx-auto text-center rounded-lg bg-tertiary text-default py-3 px-5 font-medium'>
+                className='mx-auto text-center rounded-lg bg-tertiary text-default py-3 px-5 font-medium group-invalid:pointer-events-none group-invalid:opacity-50'>
                 Send Me A Message
               </button>
             )}
             {formStatus === "sending" && (
-              <div className='flex mx-auto text-center rounded-lg bg-tertiary text-default py-3 px-5 font-medium'>
+              <div className='flex mx-auto text-center rounded-lg bg-tertiary text-default py-3 px-5 font-medium opacity-50'>
                 <LoadIcon className='w-6 h-6 mr-2 text-purple animate-spin fill-pink' />
                 Processing...
               </div>
