@@ -16,7 +16,7 @@ const Hero = () => {
 
   return (
     // container
-    <div className='container max-w-7xl mx-auto my-0 px-16 py-10 lg:py-40 md:prose-lg lg:prose-xl'>
+    <div className='container max-w-7xl mx-auto my-0 px-16 py-10 lg:py-40 prose-base md:prose-lg lg:prose-xl'>
       {/* content */}
       <div className='items-start flex flex-col justify-start relative gap-10'>
         {/* main section */}

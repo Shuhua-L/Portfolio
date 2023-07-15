@@ -1,11 +1,9 @@
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/ContactForm/ContactForm";
 
-type Props = {};
-
-const Contact = (props: Props) => {
+const Contact = () => {
   return (
     // container
-    <div className='container mx-auto my-0 px-16 md:py-40'>
+    <div className='container mx-auto my-0 px-6 py-20 lg:px-16 md:py-40'>
       {/* content */}
       <div className='flex justify-center relative'>
         <ContactForm />
