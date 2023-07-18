@@ -1,5 +1,5 @@
 import TimelineBar from "./TimelineBar";
-import { TExperience } from "@/data/experience";
+import type { TExperience } from "@/data/experience";
 
 type Props = {
   direction: "left" | "right";
@@ -21,7 +21,7 @@ const TimelineSection = ({
         <h3 className=''>
           {title}
           <br />
-          {subtitle.length > 0 && <small className='prose-gray leading-tight'>{subtitle}</small>}
+          {subtitle && <small className='prose-gray leading-tight'>{subtitle}</small>}
         </h3>
 
         <time className='block prose-sm leading-none text-comment'>{time}</time>

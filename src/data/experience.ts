@@ -1,13 +1,12 @@
 export type TExperience = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   time: string;
   description: string;
 };
 
 const hackReactor: TExperience = {
   title: "Hack Reactor",
-  subtitle: "",
   time: "2023",
   description: `
   The intense 12-week program provided a comprehensive curriculum, offering hands-on
@@ -19,7 +18,6 @@ const hackReactor: TExperience = {
 
 const CS50Web: TExperience = {
   title: "CS50's Web Programming with Python and JavaScript",
-  subtitle: "",
   time: "2022 - 2023",
   description: `
     This online course is an empowering journey
