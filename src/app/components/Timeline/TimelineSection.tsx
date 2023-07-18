@@ -1,5 +1,5 @@
 import TimelineBar from "./TimelineBar";
-import { TExperience } from "@/app/data/experience";
+import { TExperience } from "@/data/experience";
 
 type Props = {
   direction: "left" | "right";

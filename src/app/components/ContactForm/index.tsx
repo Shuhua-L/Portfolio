@@ -1,6 +1,6 @@
 "use client";
 import { FormEvent, useState, ChangeEvent } from "react";
-import { LoadIcon } from "../../assets/icons";
+import { LoadIcon } from "@/assets/icons";
 import FormError from "./FormError";
 import FormSent from "./FormSent";
 

@@ -1,4 +1,4 @@
-import { WarningIcon } from "@/app/assets/icons";
+import { WarningIcon } from "@/assets/icons";
 
 const FormError = () => {
   return (
