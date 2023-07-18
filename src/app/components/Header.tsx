@@ -1,10 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
-import { BarsIcon, CloseIcon, GithubIcon, LinkedinIcon, MoonIcon, SunIcon } from "../assets/icons";
-import { useState } from "react";
-import useDarkMode from "../hooks/useDarkMode";
+import { BarsIcon, CloseIcon, GithubIcon, LinkedinIcon, MoonIcon, SunIcon } from "@/assets/icons";
+import useDarkMode from "@/hooks/useDarkMode";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);

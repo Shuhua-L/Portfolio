@@ -1,4 +1,4 @@
-import { CalenderIcon } from "@/app/assets/icons";
+import { CalenderIcon } from "@/assets/icons";
 
 type Props = {
   position: string;

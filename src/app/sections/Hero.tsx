@@ -1,7 +1,7 @@
 "use client";
 
 import Lottie from "lottie-react";
-import spaceBoy from "@/app/assets/space-boy-animation.json";
+import spaceBoy from "@/assets/space-boy-animation.json";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Image from "next/image";
 
