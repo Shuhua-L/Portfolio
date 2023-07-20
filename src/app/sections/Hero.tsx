@@ -49,7 +49,7 @@ const Hero = () => {
               {techStack.map((tool, idx) => (
                 <li
                   key={idx}
-                  className='items-center bg-primary dark:bg-[#F8F8F2] shadow-md cursor-pointer relative flex h-14 w-14 rounded-full'>
+                  className='items-center bg-primary #dark:bg-[#F8F8F2] dark:bg-tertiary shadow-md cursor-pointer relative flex h-14 w-14 rounded-full'>
                   <Image
                     src={`./images/${tool}.svg`}
                     title={tool}
