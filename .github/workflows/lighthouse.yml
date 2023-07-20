@@ -19,7 +19,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const comment = context.payload.comment;
-            const regex = /portfolio-git-feat-contact-section-shuhua-l.vercel.app/g;
+            const regex = /portfolio-git-*-shuhua-l.vercel.app/g;
             const matches = comment.body.match(regex);
             let previewUrl = "https://";
             if (matches && matches.length) {
