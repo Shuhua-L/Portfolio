@@ -11,12 +11,6 @@
     --text-default: 37, 25, 46; /* #25192e */
     --text-info: 111, 111, 115; /* ##6f6f73 */
     --text-comment: 57, 78, 86; /* #394e56 */
-
-    --color-pink: 255, 121, 198; /* #ff79c6 */
-    --color-purple: 189, 147, 249; /* #bd93f9 */
-    --color-orange: 255, 184, 108; /* #FFB86C */
-    --color-error: 255, 85, 85; /* #ff5555 */
-    --color-success: 80, 250, 123; /* #50FA7B */
   }
 
   .dark {
@@ -27,24 +21,18 @@
     --text-default: 248, 248, 242; /* #F8F8F2 */
     --text-info: 139, 233, 253; /* #8be9fd */
     --text-comment: 98, 114, 164; /* #6272A4 */
-
-    --color-pink: 255, 121, 198; /* #ff79c6 */
-    --color-purple: 189, 147, 249; /* #bd93f9 */
-    --color-orange: 255, 184, 108; /* #FFB86C */
   }
 }
 
 @layer utilities {
-  @variants responsive {
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
-    /* Hide scrollbar for IE, Edge and Firefox */
-    .no-scrollbar {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }

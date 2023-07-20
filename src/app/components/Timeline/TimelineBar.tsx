@@ -1,4 +1,4 @@
-import { CalenderIcon } from "@/app/assets/icons";
+import { CalenderIcon } from "@/assets/icons";
 
 type Props = {
   position: string;
@@ -16,7 +16,7 @@ const TimelineBar = ({ position }: Props) => {
       <div className={`w-4 h-4 absolute ms-1 rounded-full bg-pink shadow ${dotPosition}`}></div>
       <div className='w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-purple shadow'>
         <span className='absolute flex items-center justify-center w-6 h-6 bg-transparent rounded-full text-default'>
-          <CalenderIcon />
+          <CalenderIcon className='w-2.5 h-2.5' />
         </span>
       </div>
     </div>

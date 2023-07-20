@@ -9,12 +9,14 @@ const About = () => {
   return (
     // container
     <div className='container max-w-7xl mx-auto my-0 px-6 lg:px-16 py-28 md:py-40'>
+      <h1>About Me</h1>
+      <p className='max-w-prose'>{aboutMe}</p>
       {/* content */}
       <div className='flex flex-col justify-center relative'>
-        <div className=''>
+        {/* <div className=''>
           <h1>About Me</h1>
-          <p className=' max-w-prose'>{aboutMe}</p>
-        </div>
+          <p className='max-w-prose'>{aboutMe}</p>
+        </div> */}
         <h2>Experience</h2>
         <div id='timeline'>
           <Timeline />

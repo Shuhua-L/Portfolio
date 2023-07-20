@@ -1,4 +1,4 @@
-import { CheckIcon, CloseIcon } from "@/app/assets/icons";
+import { CheckIcon, CloseIcon } from "@/assets/icons";
 
 type Props = {
   updateFormStatus: (status: string) => void;

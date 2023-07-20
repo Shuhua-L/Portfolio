@@ -17,13 +17,13 @@ const backgroundColor = {
   tertiary: generateColorClass("bg-tertiary"),
 };
 
-const colors = {
-  pink: generateColorClass("color-pink"),
-  purple: generateColorClass("color-purple"),
-  orange: generateColorClass("color-orange"),
-  error: generateColorClass("color-error"),
-  success: generateColorClass("color-success"),
-};
+// const colors = {
+//   pink: generateColorClass("color-pink"),
+//   purple: generateColorClass("color-purple"),
+//   orange: generateColorClass("color-orange"),
+//   error: generateColorClass("color-error"),
+//   success: generateColorClass("color-success"),
+// };
 
 module.exports = {
   content: [
@@ -36,7 +36,14 @@ module.exports = {
     extend: {
       textColor,
       backgroundColor,
-      colors,
+      colors: {
+        pink: "#ff79c6",
+        purple: "#bd93f9",
+        orange: "#FFB86C",
+        blue: "#8be9fd",
+        error: "#ff5555",
+        success: "#50FA7B",
+      },
       // colors: {
       //   // prominent design elements: headers
       //   primary: "#ff79c6",

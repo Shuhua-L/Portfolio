@@ -1,5 +1,5 @@
 import TimelineSection from "./TimelineSection";
-import experiences from "@/app/data/experience";
+import experiences from "@/data/experience";
 
 const Timeline = () => {
   return (
