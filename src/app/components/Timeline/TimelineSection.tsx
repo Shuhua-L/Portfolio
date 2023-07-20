@@ -17,7 +17,11 @@ const TimelineSection = ({
       {direction === "left" || <TimelineBar position={position} />}
       <div
         className={`bg-secondary px-4 rounded-xl my-4 ml-auto shadow-md
-          ${direction === "left" ? "col-start-1 col-end-5" : "col-start-6 col-end-10"}`}>
+          ${
+            direction === "left"
+              ? "col-start-1 col-end-5 md:text-end"
+              : "col-start-6 col-end-10 md:text-start"
+          }`}>
         <h3 className=''>
           {title}
           <br />
