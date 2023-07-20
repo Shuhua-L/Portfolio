@@ -22,7 +22,7 @@ const Projects = (props: Props) => {
             <div
               className='text-center md:text-left rounded-lg shadow-lg flex flex-wrap items-center'
               key={idx}>
-              <div className='block w-4/5 mx-auto shrink-0 grow-0 basis-auto md:w-1/2 lg:flex'>
+              <div className='block w-full mx-auto shrink-0 grow-0 basis-auto md:w-7/12 lg:flex'>
                 <Image
                   src={project.screenshots[0].url}
                   alt={project.screenshots[0].alt}
@@ -31,9 +31,9 @@ const Projects = (props: Props) => {
                   className='w-full rounded-t-lg md:rounded-tr-none md:rounded-bl-lg'
                 />
               </div>
-              <div className='w-full shrink-0 grow-0 basis-auto md:w-1/2  mt-0'>
+              <div className='w-full shrink-0 grow-0 basis-auto md:w-5/12  mt-0'>
                 <div className='px-6 lg:pe-12 pb-6 lg:py-12'>
-                  <h2 className='prose-h2:mb-3 font-bold tracking-tight'>
+                  <h2 className='prose-h2:my-2 font-bold tracking-tight'>
                     {project.title}
                     {/* <Link
                           className='text-gray-900 dark:text-gray-100'
@@ -41,22 +41,26 @@ const Projects = (props: Props) => {
                           {project.title}
                         </Link> */}
                   </h2>
-                  <div className='flex flex-wrap justify-around space-x-3 max-w-full'>
+
+                  <div className='flex flex-wrap justify-center md:justify-start space-x-3 max-w-full'>
+                    <span className='text-orange'></span>
                     {project.techStack.map((tech, idx) => {
                       return (
-                        <span key={idx} className={`text-${colors[idx % 3]} text-sm font-medium `}>
+                        <a key={idx} className={`text-${colors[idx % 3]} text-sm font-medium `}>
                           #{tech}
-                        </span>
+                        </a>
                       );
                     })}
                   </div>
-                  <p className='mb-6 pb-2 prose-grey'>{project.description}</p>
+                  <p className='mb-6 pb-2 prose-grey leading-6'>{project.description}</p>
+
                   {project.links?.live && (
                     <Link
                       type='button'
                       href={project.links.live}
                       target='__blank'
-                      className='inline-block rounded-lg px-7 pb-2.5 pt-3 text-sm font-medium leading-normal shadow-md'>
+                      className='inline-block rounded-lg px-5 py-2 text-sm font-medium leading-normal shadow-md
+                      bg-tertiary me-3'>
                       Live
                     </Link>
                   )}
@@ -65,7 +69,8 @@ const Projects = (props: Props) => {
                       type='button'
                       target='__blank'
                       href={project.links.code}
-                      className='inline-block rounded-lg px-7 pb-2.5 pt-3 text-sm font-medium leading-normal shadow-md'>
+                      className='inline-block rounded-lg px-5 py-2 text-sm font-medium leading-normal shadow-md
+                      bg-tertiary'>
                       Code
                     </Link>
                   )}
